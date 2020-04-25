@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>10</title>
+</head>
+<body>
+
+<div id="app1">
+	<textarea v-model="message"></textarea>
+		<button v-on:click="getArr">Вывести</button>
+		<ul>
+			<li v-for="item in items">{{ item }}</li>
+		</ul>
+	</div>
+
+<div id="app2">
+	<input type="checkbox" v-model="items" value="html">
+	<input type="checkbox" v-model="items" value="css">
+	<input type="checkbox" v-model="items" value="js">
+	<li v-for="item in items">{{ item }}</li>
+</div>
+
+<div id="app3">
+	<p>Выберите свой язык</p>
+	<span>Русский</span><input name="radio" type="radio" v-model="type" value="ru"><br>
+	<span>English</span><input name="radio" type="radio" v-model="type" value="en"><br>
+	<span>Deutsch</span><input name="radio" type="radio" v-model="type" value="de"><br>
+	<p>Ваш язык: {{ type }}</p>
+</div>
+
+<div id="app4">
+	<select v-model="selected">
+		<option v-for="option in options">{{ option }}</option>
+	</select>
+	<p>Вы выбрали: {{ selected }}</p>
+</div>
+
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="my.js"></script>
+</body>
+</html>

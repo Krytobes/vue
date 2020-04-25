@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>17</title>
+</head>
+<body>
+
+	<div id="app1">
+		<a href="https://www.youtube.com/" v-on:click.prevent="addText">Вывести</a>
+		<p>Ваша ссылка: {{ message }}</p>
+	</div>
+
+	<div id="app2">
+		<p v-once>{{ text }}</p>
+		<p>{{ text }}</p>
+		<button v-on:click="smena">Вывести</button>
+	</div>
+
+	<div id="app3">
+		<p>Абзац: <span v-html="message"></span></p>
+		<button v-on:click="newMessage">Вывести</button>
+	</div>
+
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="my.js"></script>
+</body>
+</html>
